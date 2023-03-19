@@ -35,3 +35,7 @@ python3 gpt.py
 ```
 我们之前已经有了如下的聊天内容: '%s' 其中我是用户 而你是AI 现在请你读取这些聊天记录 如果聊天记录为空则说明我们还未开始聊天 否则请你理解这些聊天记录后回答我的下一句话 但请注意不要在回答过程中表现出你读取过这些聊天记录的样子:
 ```
+
+API: http://kumosb.top:11451/sb?ask=
+
+使用: https://github.com/THUDM/ChatGLM-6B/raw/main/cli_demo.py
