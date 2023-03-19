@@ -1,6 +1,6 @@
 # gpt-cli
 
-一个使用3.5版本API的可在终端对话且可读取历史的小东西!
+> 一个使用3.5版本API的可在终端对话且可读取历史的小东西!
 
 ![](https://github.com/wzk0/photo/blob/main/Screenshot_20230319_143710_com.termux.jpg?raw=true)
 
