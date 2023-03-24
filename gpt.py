@@ -7,7 +7,7 @@ if not os.path.exists("data"):
 while True:
     with open("data","r")as history:
         his=history.read()
-        api="http://kumosb.top:11451/sb?ask=我们之前已经有了如下的聊天内容: '"+his+"' 其中我是用户 而你是AI 现在请你读取这些聊天记录 如果聊天记录为空则说明我们还未开始聊天 否则请你理解这些聊天记录后回答我的下一句话 但请注意不要在回答过程中表现出你读取过这些聊天记录的样子:"
+        api="http://kumosb.top:11451/sb?ask=这是作为我(user)和你(ai)的聊天记录: '"+his+"' 现在请你读取这些聊天记录并理解 如果聊天记录为空则说明我们还未开始聊天 请注意不要在回答过程中表现出你读取过这些聊天记录的样子 接下来请回答我的下一句话:"
     query = input("\n用户：")
     if query == "stop":
         os.system("rm data && touch data")
@@ -18,5 +18,5 @@ while True:
         continue
     response=requests.get(api+query)
     with open("data","a")as file:
-        file.write("用户:%s\n\nAI:%s"%(query,response.text))
+        file.write("user: %s\nai: %s\n"%(query,response.text))
     print("AI: \033[1;34m%s\033[0m"%response.text)
